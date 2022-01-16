@@ -1,6 +1,11 @@
-# Turborepo starter with pnpm
+# DON'T PANIC
+The Hitchhiker's Guide to the Galaxy was a “wholly remarkable book." It had been compiled and recompiled many times over many years and under many different editorships. It contained contributions from countless numbers of travellers and researchers.
 
-This is an official starter turborepo.
+<p align="center">
+    <img src="https://static.wikia.nocookie.net/hitchhikers/images/e/e1/Guide.jpg/revision/latest?cb=20080505045130">
+</p>
+
+
 
 ## What's inside?
 
@@ -76,3 +81,7 @@ Learn more about the power of Turborepo:
 - [Scoped Tasks](https://turborepo.org/docs/features/scopes)
 - [Configuration Options](https://turborepo.org/docs/reference/configuration)
 - [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
+
+
+## TO-DOS
+- [] https://kodiakhq.com/ Automate your GitHub Pull Requests

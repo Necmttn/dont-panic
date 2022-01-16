@@ -1,0 +1,35 @@
+{
+  "name": "@dont-panic/mdx",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "source": "./src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "dev": "tsc -w",
+    "build": "tsc",
+    "lint": "TIMING=1 eslint src --fix",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "config": "workspace:*",
+    "tsconfig": "workspace:*",
+    "typescript": "^4.5.3"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "image-size": "^1.0.1",
+    "mdx-bundler": "^8.0.1",
+    "next": "^12.0.8",
+    "next-mdx-remote": "^3.0.8",
+    "reading-time": "^1.5.0",
+    "remark-autolink-headings": "^7.0.1",
+    "remark-slug": "^7.0.1",
+    "unist-util-find-after": "^4.0.0",
+    "unist-util-visit": "^4.1.0",
+    "unist-util-visit-parents": "^5.1.0"
+  }
+}

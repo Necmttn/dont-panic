@@ -1,10 +1,12 @@
 {
-  "name": "turborepo-basic-shared",
+  "name": "dont-panic",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "tutorials/*",
+    "boilerplates/*"
   ],
   "scripts": {
     "build": "turbo run build",
