@@ -9,23 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@dont-panic/mdx": "workspace:*",
+    "@tailwindcss/typography": "^0.5.0",
+    "autoprefixer": "^10.4.2",
     "next": "12.0.7",
     "next-mdx-remote": "^3.0.8",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "ui": "workspace:*"
+    "@dont-panic/ui": "workspace:*"
   },
   "optionalDependencies": {
-    "@dont-panic/learn-solana-wallet-balance": "workspace:*",
-    "@dont-panic/learn-near-wallet-balance": "workspace:*"
+    "@dont-panic/learn-near-wallet-balance": "workspace:*",
+    "@dont-panic/learn-solana-wallet-balance": "workspace:*"
   },
   "devDependencies": {
+    "@dont-panic/mdx": "workspace:*",
+    "@dont-panic/config": "workspace:*",
+    "@dont-panic/tsconfig": "workspace:*",
     "@types/react": "17.0.37",
-    "config": "workspace:*",
     "eslint": "7.32.0",
     "next-transpile-modules": "9.0.0",
-    "tsconfig": "workspace:*",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.15",
     "typescript": "^4.5.3"
   }
 }
