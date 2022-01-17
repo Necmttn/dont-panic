@@ -6,6 +6,7 @@ import Head from "next/head";
 import path from 'path';
 import { MDXRemote } from "next-mdx-remote";
 import _ from "lodash";
+import { useRouter } from "next/router";
 
 const Image = () => {
   return <div>Image</div>
@@ -13,6 +14,10 @@ const Image = () => {
 
 
 const LearnPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ( props: InferGetStaticPropsType<typeof getStaticProps>) => {
+    const router= useRouter()
+    if (router.isFallback) {
+      return <h1>Loading...</h1>
+    }
     const { mdxSource,frontMatter} = props.post
     return (
         <>
@@ -21,7 +26,7 @@ const LearnPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ( pr
         </Head>
         <div>
           <div className="bg-black h-screen flex items-center justify-center flex-col">
-            <h1 className="text-[10rem] font-mono text-yellow-300 font-bold leading-none">DON'T <br /> PANIC!</h1>
+            <h1 className="text-[10rem] font-mono text-yellow-300 font-bold leading-none">DON{"'"}T <br /> PANIC!</h1>
             <p className="text-gray-100 opacity-40">keep scroll down. 👇🏻</p>
           </div>
           <Button/>
