@@ -14,8 +14,8 @@ export default function Web(props) {
           Start
           </Button>
           <div>
-            {props.paths.map(path => {
-              return (<div className="text-white">
+            {props.paths.map((path, index) => {
+              return (<div className="text-white" key={`l-${index}`}>
                 <Link href={`/learn/${path.params.slug.join("/")}`}>
                   {path.params.slug.join(" - ")}
                 </Link>
