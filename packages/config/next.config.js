@@ -3,7 +3,6 @@ const withTM = require("next-transpile-modules")([
   "@dont-panic/mdx"
 ]);
 
-/** @type {import('next').NextConfig} */
 module.exports = withTM({
   reactStrictMode: true,
   webpack:(config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
@@ -13,4 +12,3 @@ module.exports = withTM({
     return config
   }, 
 });
-

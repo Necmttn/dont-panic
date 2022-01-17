@@ -8,11 +8,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@dont-panic/mdx": "workspace:*",
     "@dont-panic/ui": "workspace:*",
     "@solana/web3.js": "^1.31.0",
+    "autoprefixer": "^10.4.2",
     "next": "12.0.8",
+    "next-mdx-remote": "^3.0.8",
+    "postcss": "^8.4.5",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "tailwindcss": "^3.0.15"
   },
   "devDependencies": {
     "@types/node": "17.0.8",
