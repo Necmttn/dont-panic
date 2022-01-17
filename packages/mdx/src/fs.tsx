@@ -1,7 +1,7 @@
 import fs from 'fs';
 import matter from 'gray-matter'
 import { serialize } from 'next-mdx-remote/serialize'
-import remarkSlug from 'remark-slug'
+// import remarkSlug from 'remark-slug'
 import readingTime from 'reading-time'
 import rehypeAutolinkHeadings from 'remark-autolink-headings'
 
@@ -27,7 +27,7 @@ export const getFileByPath = async <T extends PostType>(
       mdxOptions: {
         rehypePlugins: [rehypeAutolinkHeadings],
         remarkPlugins: [
-          remarkSlug, 
+          // remarkSlug, 
           // remarkSectionize, 
           // remarkImgToJsx
         ],

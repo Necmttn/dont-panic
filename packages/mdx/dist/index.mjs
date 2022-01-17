@@ -27,6 +27,9 @@ var __objRest = (source, exclude) => {
   return target;
 };
 
+// src/renderer.tsx
+import { MDXRemote } from "next-mdx-remote";
+
 // src/image.tsx
 import NextImage from "next/image";
 var Image = (_a) => {
@@ -36,8 +39,15 @@ var Image = (_a) => {
 var image_default = Image;
 
 // src/renderer.tsx
-var MdxComponents = {
+var Index = {
   Image: image_default
+};
+var MDXLayoutRenderer = (_a) => {
+  var _b = _a, { mdxSource, customComponents } = _b, rest = __objRest(_b, ["mdxSource", "customComponents"]);
+  const components = __spreadValues(__spreadValues({}, Index), customComponents);
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement(MDXRemote, __spreadValues({
+    components
+  }, mdxSource))));
 };
 
 // src/types.ts
@@ -82,7 +92,8 @@ var getFileByPath = async (slug, pathForFile) => {
   return result;
 };
 export {
-  MdxComponents,
+  Index,
+  MDXLayoutRenderer,
   PostType,
   getFileByPath
 };

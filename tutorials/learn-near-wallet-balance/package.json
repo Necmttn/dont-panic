@@ -1,0 +1,24 @@
+{
+  "name": "@dont-panic/learn-near-wallet-balance",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "near-api-js": "^0.44.2",
+    "next": "12.0.8",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "ui": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.8",
+    "@types/react": "17.0.38",
+    "eslint": "7",
+    "eslint-config-next": "12.0.8",
+    "typescript": "4.5.4"
+  }
+}

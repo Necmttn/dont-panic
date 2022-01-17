@@ -1,0 +1,59 @@
+---
+title: Making first request 
+---
+# Structing the request for the RPC 
+
+You might wonder how to get the balance of your solana wallet in a dApp. 
+
+
+<Image src="https://static.wikia.nocookie.net/hitchhikers/images/e/e1/Guide.jpg/revision/latest?cb=20080505045130" />
+
+
+
+```typescript
+const balanceFetcher = (keyPair: Keypair, cluster: Cluster) => () =>
+  axios({
+    url: clusterApiUrl(cluster),
+    method: 'post',
+    headers: {'Content-Type': 'application/json'},
+    data: [
+      {
+        jsonrpc: '2.0',
+        id: 0,
+        method: 'getBalance', // SOL balance.
+        params: [keyPair?.publicKey.toBase58()],
+      },
+      {
+        jsonrpc: '2.0',
+        id: 1,
+        method: 'getTokenAccountsByOwner', //https://docs.solana.com/developing/clients/jsonrpc-api#gettokenaccountsbyowner
+        params: [
+          keyPair?.publicKey.toBase58(),
+          {
+            mint:
+              cluster === 'mainnet-beta'
+                ? USDC_MINT_ADDRESS
+                : 'EmXq3Ni9gfudTiyNKzzYvpnQqnJEMRw2ttnVXoJXjLo1', // orca devnet pool USDC equivelent token mint address.
+          },
+          {
+            encoding: 'jsonParsed',
+          },
+        ],
+      },
+      {
+        jsonrpc: '2.0',
+        id: 2,
+        method: 'getTokenAccountsByOwner', //https://docs.solana.com/developing/clients/jsonrpc-api#gettokenaccountsbyowner
+        params: [
+          keyPair?.publicKey.toBase58(),
+          {
+            mint: ORCA_MINT_ADDRESS, // just because it a midway swap token in devnet.
+          },
+          {
+            encoding: 'jsonParsed',
+          },
+        ],
+      },
+    ],
+  });
+```
