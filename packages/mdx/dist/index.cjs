@@ -19,18 +19,6 @@ var __spreadValues = (a, b) => {
   return a;
 };
 var __markAsModule = (target) => __defProp(target, "__esModule", { value: true });
-var __objRest = (source, exclude) => {
-  var target = {};
-  for (var prop in source)
-    if (__hasOwnProp.call(source, prop) && exclude.indexOf(prop) < 0)
-      target[prop] = source[prop];
-  if (source != null && __getOwnPropSymbols)
-    for (var prop of __getOwnPropSymbols(source)) {
-      if (exclude.indexOf(prop) < 0 && __propIsEnum.call(source, prop))
-        target[prop] = source[prop];
-    }
-  return target;
-};
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -55,23 +43,9 @@ var __toCommonJS = /* @__PURE__ */ ((cache) => {
 // src/index.tsx
 var src_exports = {};
 __export(src_exports, {
-  MdxComponents: () => MdxComponents,
   PostType: () => PostType,
   getFileByPath: () => getFileByPath
 });
-
-// src/image.tsx
-var import_image = __toESM(require("next/image"), 1);
-var Image = (_a) => {
-  var rest = __objRest(_a, []);
-  return /* @__PURE__ */ React.createElement(import_image.default, __spreadValues({}, rest));
-};
-var image_default = Image;
-
-// src/renderer.tsx
-var MdxComponents = {
-  Image: image_default
-};
 
 // src/types.ts
 var PostType = /* @__PURE__ */ ((PostType2) => {
@@ -117,7 +91,6 @@ var getFileByPath = async (slug, pathForFile) => {
 module.exports = __toCommonJS(src_exports);
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  MdxComponents,
   PostType,
   getFileByPath
 });

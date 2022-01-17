@@ -14,31 +14,6 @@ var __spreadValues = (a, b) => {
     }
   return a;
 };
-var __objRest = (source, exclude) => {
-  var target = {};
-  for (var prop in source)
-    if (__hasOwnProp.call(source, prop) && exclude.indexOf(prop) < 0)
-      target[prop] = source[prop];
-  if (source != null && __getOwnPropSymbols)
-    for (var prop of __getOwnPropSymbols(source)) {
-      if (exclude.indexOf(prop) < 0 && __propIsEnum.call(source, prop))
-        target[prop] = source[prop];
-    }
-  return target;
-};
-
-// src/image.tsx
-import NextImage from "next/image";
-var Image = (_a) => {
-  var rest = __objRest(_a, []);
-  return /* @__PURE__ */ React.createElement(NextImage, __spreadValues({}, rest));
-};
-var image_default = Image;
-
-// src/renderer.tsx
-var MdxComponents = {
-  Image: image_default
-};
 
 // src/types.ts
 var PostType = /* @__PURE__ */ ((PostType2) => {
@@ -82,7 +57,6 @@ var getFileByPath = async (slug, pathForFile) => {
   return result;
 };
 export {
-  MdxComponents,
   PostType,
   getFileByPath
 };

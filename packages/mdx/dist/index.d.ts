@@ -1,7 +1,4 @@
-import { ComponentMap } from 'mdx-bundler/client';
 import { MDXRemoteSerializeResult } from 'next-mdx-remote';
-
-declare const MdxComponents: ComponentMap;
 
 declare enum PostType {
     TUTORIAL = "tutorial",
@@ -48,4 +45,4 @@ declare type FrontMatterPostType<T> = T extends PostType.BLOGPOST ? FrontMatterP
 
 declare const getFileByPath: <T extends PostType>(slug: string, pathForFile: string) => Promise<FrontMatterPostType<T>>;
 
-export { FrontMatterPost, FrontMatterPostType, FrontMatterTutorial, MdxComponents, Post, PostType, ReadingTime, Tutorial, getFileByPath };
+export { FrontMatterPost, FrontMatterPostType, FrontMatterTutorial, Post, PostType, ReadingTime, Tutorial, getFileByPath };

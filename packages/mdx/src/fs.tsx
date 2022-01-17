@@ -6,7 +6,7 @@ import readingTime from 'reading-time'
 import rehypeAutolinkHeadings from 'remark-autolink-headings'
 
 // import { remarkSectionize } from './remark-sectionize-fork'
-import { remarkImgToJsx } from './remark-img-to-jsx'
+// import { remarkImgToJsx } from './remark-img-to-jsx'
 import { FrontMatterPostType, PostType } from './types';
 
 // Regex to find all the custom static tweets in a MDX file
@@ -25,7 +25,7 @@ export const getFileByPath = async <T extends PostType>(
   
     const mdxSource = await serialize(content, {
       mdxOptions: {
-        rehypePlugins: [rehypeAutolinkHeadings],
+        rehypePlugins: [rehypeAutolinkHeadings as any], // TODO: fix this.
         remarkPlugins: [
           // remarkSlug, 
           // remarkSectionize, 

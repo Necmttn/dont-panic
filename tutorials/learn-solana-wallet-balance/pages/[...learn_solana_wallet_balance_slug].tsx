@@ -69,7 +69,7 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const slug = (context.params.learn_solana_wallet_balance_slug as string[])
+  const slug = (context?.params?.learn_solana_wallet_balance_slug as string[])
   const pathForFile = path.join(process.cwd(), 'content', `${slug[0]}.mdx`)
   const post = await getFileByPath<PostType.TUTORIAL>('learn', pathForFile);
     return {

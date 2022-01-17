@@ -4,6 +4,7 @@ const withTM = require("next-transpile-modules")([
 ]);
 
 module.exports = withTM({
+  domains: ['i.imgur.com'],
   reactStrictMode: true,
   webpack:(config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     if (!isServer) {
