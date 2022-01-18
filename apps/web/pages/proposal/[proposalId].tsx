@@ -7,3 +7,5 @@ const ProposalPage : NextPage = (props) => {
         </div>
     )
 }
+
+export default ProposalPage;

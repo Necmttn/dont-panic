@@ -1,7 +1,8 @@
+import React from "react";
 import { MDXWrapper } from ".";
 
 
-export const MDXSplitView: React.FC<{content: any}> = ({ content, children }) => {
+export const MDXSplitView: React.FC<{content: React.ReactNode}> = ({ content, children }) => {
     const isDev = process.env.NODE_ENV === 'development';
     if (isDev) {
     return (
@@ -17,5 +18,9 @@ export const MDXSplitView: React.FC<{content: any}> = ({ content, children }) =>
         </div>
       )
     } 
-    return children
+    return (
+      <>
+      {children}
+      </>
+    )
 }
