@@ -1,6 +1,6 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
 import {getFileByPath, PostType} from '@dont-panic/mdx';
-import { MDXComponents, MDXWrapper, Button } from "@dont-panic/ui";
+import { MDXComponents, MDXWrapper, Button, Navbar } from "@dont-panic/ui";
 import fs from 'fs';
 import Head from "next/head";
 import path from 'path';
@@ -24,8 +24,10 @@ const LearnPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ( pr
         <Head>
             <title>{frontMatter.title}</title>
         </Head>
+        <Navbar/> 
         <div>
           <div className="bg-black h-screen flex items-center justify-center flex-col">
+            <span className="text-white font-light opacity-50">First of all</span>
             <h1 className="text-[10rem] font-mono text-yellow-300 font-bold leading-none">DON{"'"}T <br /> PANIC!</h1>
             <p className="text-gray-100 opacity-40">keep scroll down. 👇🏻</p>
           </div>
