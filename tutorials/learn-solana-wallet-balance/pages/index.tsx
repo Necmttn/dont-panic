@@ -19,9 +19,11 @@ const Home: NextPage = () => {
           Welcome to Solana Balance Tutorial 
         </h1>
         <Link href="/intro" passHref>
+          <a>
           <Button>
             Let{"'"}s get started
           </Button>
+          </a>
           </Link>
       </main>
 
