@@ -1,6 +1,6 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
 import {getFileByPath, PostType} from '@dont-panic/mdx';
-import { MDXComponents, MDXWrapper, Button, Navbar } from "@dont-panic/ui";
+import { MDXComponents, MDXWrapper, Button, Navbar, MDXSplitView } from "@dont-panic/ui";
 import fs from 'fs';
 import Head from "next/head";
 import path from 'path';
@@ -25,12 +25,10 @@ const LearnPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ( pr
             <title>{frontMatter.title}</title>
         </Head>
         <Navbar />
-        <div>
-          <Button/>
-          <MDXWrapper>
+        <MDXSplitView frontmatter={frontMatter} content={
             <MDXRemote components={MDXComponents} {...mdxSource} />
-          </MDXWrapper>
-        </div>
+        }>
+        </MDXSplitView>
         </>
     )
 }
