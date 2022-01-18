@@ -8,10 +8,6 @@ import { MDXRemote } from "next-mdx-remote";
 import _ from "lodash";
 import { useRouter } from "next/router";
 
-const Image = () => {
-  return <div>Image</div>
-}
-
 
 const LearnPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ( props: InferGetStaticPropsType<typeof getStaticProps>) => {
     const router= useRouter()
@@ -80,7 +76,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
             slug,
         },
     }
-
 }
 
 export default LearnPage
