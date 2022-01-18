@@ -9,21 +9,22 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@dont-panic/ui": "workspace:*",
     "@tailwindcss/typography": "^0.5.0",
     "autoprefixer": "^10.4.2",
     "next": "12.0.7",
     "next-mdx-remote": "^3.0.8",
     "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "@dont-panic/ui": "workspace:*"
+    "react-codesandboxer": "^3.1.5",
+    "react-dom": "17.0.2"
   },
   "optionalDependencies": {
     "@dont-panic/learn-near-wallet-balance": "workspace:*",
     "@dont-panic/learn-solana-wallet-balance": "workspace:*"
   },
   "devDependencies": {
-    "@dont-panic/mdx": "workspace:*",
     "@dont-panic/config": "workspace:*",
+    "@dont-panic/mdx": "workspace:*",
     "@dont-panic/tsconfig": "workspace:*",
     "@types/react": "17.0.37",
     "eslint": "7.32.0",
