@@ -1,5 +1,5 @@
 {
-    "template": "node",
+    "template": "next",
     "view": "console",
     "startScript": "npx pnpm i -r"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@dont-panic/learn-solana-wallet-balance",
+  "name": "learn-solana-wallet-balance",
   "private": true,
   "scripts": {
     "dev": "next dev",

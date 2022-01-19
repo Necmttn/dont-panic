@@ -1,5 +1,5 @@
 {
-  "name": "@dont-panic/learn-near-wallet-balance",
+  "name": "learn-near-wallet-balance",
   "private": true,
   "scripts": {
     "dev": "next dev",
