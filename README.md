@@ -1,5 +1,8 @@
 # DON'T PANIC
-The Hitchhiker's Guide to the Galaxy was a “wholly remarkable book." It had been compiled and recompiled many times over many years and under many different editorships. It contained contributions from countless numbers of travellers and researchers.
+
+# The Hitchhiker's Guide to the <s>Galaxy</s>  Web 3
+
+The Hitchhiker's Guide to the <s>Galaxy</s> Web 3 was a “wholly remarkable book." It had been compiled and recompiled many times over many years and under many different <s>editorships</s> daos. It contained contributions from countless numbers of travellers and researchers.
 
 <p align="center">
     <img src="https://static.wikia.nocookie.net/hitchhikers/images/e/e1/Guide.jpg/revision/latest?cb=20080505045130">
