@@ -1,4 +1,4 @@
-name: "Deploy wiht Governance Proposal"
+name: "Deploy with Governance Proposal"
 description: "Uploads an anchor program as a bpf, then creates a proposal to upgrade to this buffer"
 inputs:
   program:
