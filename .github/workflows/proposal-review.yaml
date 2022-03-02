@@ -1,7 +1,7 @@
 name: Proposal Reviewers Check
 
 on:
-  push:
+  # push:
   pull_request:
     types: [opened]
     branches:    
