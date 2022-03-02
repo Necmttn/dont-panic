@@ -32,6 +32,7 @@ jobs:
 
   request_reviewers:
     name: Request reviews on opened PRs
+    runs-on: ubuntu-latest
     steps:
       - name: Create PR review request
         env:
