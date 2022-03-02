@@ -1,5 +1,9 @@
 name: Proposal Reviewers Check
 
+permissions:
+  contents: read
+  pull-requests: write
+
 on:
   pull_request:
     types: [ opened, reopened, synchronize ]
@@ -40,6 +44,7 @@ jobs:
         run: |
           gh pr edit ${{ github.event.pull_request.html_url }} \
               --add-reviewer @necmttn 
+          echo $GITHUB_TOKEN
 
   approved:
     if: ${{ needs.changes.outputs.package == 'true' }}
