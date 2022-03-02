@@ -28,7 +28,7 @@ jobs:
   echo_event:
     runs-on: ubuntu-latest
     steps:
-      - run: echo EVENT: ${{ github.event }}
+      - run: echo "event ${{ github.event }}"
 
   request_reviewers:
     name: Request reviews on opened PRs
