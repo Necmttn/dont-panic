@@ -1,14 +1,15 @@
 name: Proposal Reviewers Check
 
+permissions:
+  contents: read
+  pull-requests: write
+
 on:
-  # push:
   pull_request:
-    types: [opened]
+    types: [ opened, reopened, synchronize ]
+  pull_request_target:
     branches:    
       - 'tutorials/**'
-  pull_request_review:
-    types: [submitted, dismissed]
-  pull_request_review_comment:
   
 
 jobs:
@@ -28,8 +29,25 @@ jobs:
           package:
             - 'tutorials/**'
 
+  echo_event:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "event ${{ github.event }}"
+
+  request_reviewers:
+    name: Request reviews on opened PRs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create PR review request
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr edit ${{ github.event.pull_request.html_url }} \
+              --add-reviewer @necmttn 
+          echo $GITHUB_TOKEN
+
   approved:
-    if: github.event.review.state == 'approved'
+    if: ${{ needs.changes.outputs.package == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "This PR was approved" 
@@ -39,7 +57,7 @@ jobs:
       - run: echo ${{ github.event.sender.login}} sender username 
 
   dismissed:
-    if: github.event.review.state == 'dismissed'
+    if: ${{ needs.changes.outputs.package == 'true' }}
     runs-on: ubuntu-latest
     steps: 
       - run: echo "This PR was dismissed"
