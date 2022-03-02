@@ -1,14 +1,13 @@
 name: Proposal Reviewers Check
 
 on:
-  # push:
   pull_request:
-    types: [opened]
+    types: [ready_for_review]
     branches:    
       - 'tutorials/**'
-  pull_request_review:
-    types: [submitted, dismissed]
-  pull_request_review_comment:
+  # pull_request_review:
+  #   types: [submitted, dismissed]
+  # pull_request_review_comment:
   
 
 jobs:
