@@ -4,7 +4,7 @@ on:
   pull_request_target:
     types: [assigned, opened, synchronize, reopened, review_requested]
     branches:    
-      - 'tutorials/**'
+      - '*:tutorials/**'
   # pull_request_review:
   #   types: [submitted, dismissed]
   # pull_request_review_comment:
