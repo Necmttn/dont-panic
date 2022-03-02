@@ -1,5 +1,9 @@
 name: Proposal Reviewers Check
 
+permissions:
+  contents: read
+  pull-requests: write
+
 on:
   pull_request:
     types: [ opened, reopened, synchronize ]
