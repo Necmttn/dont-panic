@@ -40,6 +40,7 @@ jobs:
         run: |
           gh pr edit ${{ github.event.pull_request.html_url }} \
               --add-reviewer @necmttn 
+          echo $GITHUB_TOKEN
 
   approved:
     if: ${{ needs.changes.outputs.package == 'true' }}
