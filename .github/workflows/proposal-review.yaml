@@ -1,0 +1,49 @@
+name: Proposal Reviewers Check
+
+on:
+  # push:
+  # pull_request:
+  #   types: [opened]
+  #   branches:    
+  #     - 'tutorials/**'
+  pull_request_review:
+    types: [submitted, dismissed]
+  # pull_request_review_comment:
+  
+
+jobs:
+  changes:
+    runs-on: ubuntu-latest
+    # Set job outputs to values from filter step
+    outputs:
+      package: ${{ steps.filter.outputs.package }}
+
+    steps:
+    - uses: actions/checkout@v2
+    # For pull requests it's not necessary to checkout the code
+    - uses: dorny/paths-filter@v2
+      id: filter
+      with:
+        filters: |
+          package:
+            - 'tutorials/**'
+
+  approved:
+    if: github.event.review.state == 'approved'
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This PR was approved" 
+      - run: echo ${{ github.event.review.user.login }} approved this PR
+      - run: echo ${{ github.event.review.state}} review state 
+      - run: echo ${{ github.event.review.author_association}} author_association
+      - run: echo ${{ github.event.sender.login}} sender username 
+
+  dismissed:
+    if: github.event.review.state == 'dismissed'
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "This PR was dismissed"
+      - run: echo ${{ github.event.review.user.login }} dismissed this PR
+      - run: echo ${{ github.event.review.state}} review state 
+      - run: echo ${{ github.event.review.author_association}} author_association
+      - run: echo ${{ github.event.sender.login}} sender username 
