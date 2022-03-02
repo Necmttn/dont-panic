@@ -29,7 +29,7 @@ jobs:
             - 'tutorials/**'
 
   approved:
-    if: github.event.review.state == 'approved'
+    # if: github.event.review.state == 'approved'
     runs-on: ubuntu-latest
     steps:
       - run: echo "This PR was approved" 
@@ -39,7 +39,7 @@ jobs:
       - run: echo ${{ github.event.sender.login}} sender username 
 
   dismissed:
-    if: github.event.review.state == 'dismissed'
+    # if: github.event.review.state == 'dismissed'
     runs-on: ubuntu-latest
     steps: 
       - run: echo "This PR was dismissed"
