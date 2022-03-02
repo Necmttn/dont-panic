@@ -4,6 +4,7 @@ import { serialize } from 'next-mdx-remote/serialize'
 // import remarkSlug from 'remark-slug'
 import readingTime from 'reading-time'
 import rehypeAutolinkHeadings from 'remark-autolink-headings'
+import remarkTocHeadings from './remark-toc-headings';
 
 // import { remarkSectionize } from './remark-sectionize-fork'
 // import { remarkImgToJsx } from './remark-img-to-jsx'

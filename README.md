@@ -24,6 +24,21 @@ This turborepo uses [pnpm](https://pnpm.io) as a packages manager. It includes t
 - `mdx`: utils for the MDX compiler
 
 
+## Workspaces
+-- Apps.
+--- `learn-next---docs`: a [Next.js](https://nextjs.org) app which host tutorials 
+----- `learn` : sub route in the application which is the main page of the tutorial
+------ `learn`/<tutorial-name>/<tutorial-section.> : 
+----- `proposal` : sub route in the application which is the main page of the proposal
+------ `proposal`/<proposal-name>: proposal page with current status. and quick actions to vote, comment, etc. 
+------ `<profile/builder>/<user-name/user-wallet-address>: profile page of the user.
+
+-- Packages.
+--- `configs`: configuration files for the monorepo
+
+
+
+
 ### Tutorials
 - [Solana Wallet Balance](/tutorials/solana-wallet-balance)
 - [Near Wallet Balance](/tutorials/near-wallet-balance)

@@ -70,7 +70,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
             slug,
         },
     }
-
 }
 
 export default LearnPage
