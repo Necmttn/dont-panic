@@ -3,9 +3,12 @@ name: Proposal Reviewers Check
 on:
   push:
   pull_request_target:
-    types: [assigned, opened, synchronize, reopened, review_requested]
-  #     branches:    
-  #       - '*:tutorials/**'
+    branches:    
+      - 'tutorials/**'
+  # pull_request:
+  #   branches:
+  #     - 'tutorials/**'
+  #   types: [assigned, opened, synchronize, reopened, review_requested]
   # pull_request_review:
   #   types: [submitted, dismissed]
   # pull_request_review_comment:
