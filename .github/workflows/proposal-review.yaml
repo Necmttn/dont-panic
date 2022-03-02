@@ -2,7 +2,7 @@ name: Proposal Reviewers Check
 
 on:
   pull_request_target:
-    types: [ready_for_review]
+    types: [ready_for_review, opened]
     branches:    
       - 'tutorials/**'
   # pull_request_review:
